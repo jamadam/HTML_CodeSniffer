@@ -1,0 +1,20 @@
+<html>
+<script src='./HTMLCS.js'></script>
+<script>
+    window.onload = function() {
+        HTMLCSAuditor.run('WCAG2AA', document.body, {
+            path: './',
+            lang: 'ja'
+        });
+        /*
+        HTMLCS.process('WCAG2AA', '<body><h2>aaa</h2></body>', function(){
+            var a = HTMLCS.getMessages();
+            console.log(a);
+        }, null, 'ja');
+        */
+    };
+</script>
+<body>
+    aa
+</body>
+</html>

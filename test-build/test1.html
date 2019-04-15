@@ -1,0 +1,28 @@
+<html lang="ja">
+    <title>test1</title>
+    <script src='./HTMLCS.js'></script>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+        body {
+            padding-top:200px;
+            background-color:#ccc;
+        }
+        iframe {
+            width:100%;
+            height:300px;
+        }
+    </style>
+    <body>
+        <iframe id="iframe" src="./test2.html" title="Main Content"></iframe>
+    </body>
+    <script>
+    document.querySelector("iframe").onload = function() {
+        HTMLCSAuditor.run('WCAG2AA', null, {
+            path: './',
+            lang: 'ja'
+        });
+    };
+    </script>
+</html>
