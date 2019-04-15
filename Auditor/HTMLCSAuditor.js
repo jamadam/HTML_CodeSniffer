@@ -1698,6 +1698,9 @@ _global.HTMLCSAuditor = new function()
 
             while (true) {
                 do {
+                    if (element.nodeName.toLowerCase() === "iframe") {
+                        break;
+                    }
                     left += element.offsetLeft;
                     top  += element.offsetTop;
                 } while (element = element.offsetParent);
